@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
 import { Routes, Route } from "react-router-dom";
+import Error from "./components/Error";
 
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
         <Route path="/dashboard" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Login insideRegister={true} />}/>
-        <Route path="/*" element={<LandingPage/>}/>
+        <Route path="/*" element={<Error/>}/>
       </Routes>
     </div>
   );

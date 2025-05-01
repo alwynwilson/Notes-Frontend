@@ -16,10 +16,11 @@ const TagInput = ({tags,setTags}) => {
     }
 
     const handleKeyDown = (e) => {
-        if(e.key === "Enter") {
-            addNewTag("")
+        if (e.key === "Enter") {
+          e.preventDefault();
+          addNewTag();
         }
-    }
+      };
 
     const handleRemoveTag = (tagToRemove) => {
         setTags(tags.filter((tag)=> tag!== tagToRemove))
@@ -31,7 +32,7 @@ const TagInput = ({tags,setTags}) => {
                 <div className="flex items-center gap-2 flex-wrap mt-2">
                 {
                     tags.map((tag,index)=>(
-                        <span key={index} className="flex items-center gap-2 flex-wrap text-sm text-slate-900 bg-slate-100 px-3 py-1 rounded">
+                        <span key={index} className="flex items-center gap-2 flex-wrap text-sm text-slate-900 bg-slate-100 px-3 py-1 rounded ">
                             {tag}
                                 <button onClick={()=>{handleRemoveTag(tag)}}>
                                     <MdClose/>

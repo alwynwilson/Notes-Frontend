@@ -63,7 +63,6 @@ const Login = ({ insideRegister }) => {
   const handleLogin = async (e)=>{
     e.preventDefault()
     if(userData.email && userData.password){
-      //api call
       try{
         const result = await loginAPI(userData)
         console.log(result);
@@ -167,7 +166,6 @@ const Login = ({ insideRegister }) => {
                 <button
                   type="button"
                   className="w-full text-sm bg-gray-800 text-white p-2 rounded my-1 hover:bg-black cursor-pointer"
-                  // onTouchStart={handleRegister}
                   onClick={handleRegister}
                 >
                   Register
@@ -187,7 +185,6 @@ const Login = ({ insideRegister }) => {
                 <button
                   type="button"
                   className="w-full text-sm bg-[#434446] text-white p-2 rounded my-1 hover:bg-black cursor-pointer"
-                  // onTouchStart={handleLogin}
                   onClick={handleLogin}
                 >
                   Login

@@ -3,6 +3,7 @@ import { getInitials } from "../utils/helper";
 
 const ProfileInfo = ({onLogout}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const name = JSON.parse(sessionStorage.getItem('user'))  
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -14,7 +15,7 @@ const ProfileInfo = ({onLogout}) => {
           <div
             className="w-10 h-10 flex items-center justify-center rounded-full text-slate-950 font-medium bg-slate-200 cursor-pointer"
           >
-            {getInitials('Williams Johns')}
+            {getInitials(name.username)}
           </div>
           
         </div>
@@ -42,7 +43,7 @@ const ProfileInfo = ({onLogout}) => {
         )}
       </div>
       <div className="max-[425px]:hidden">
-    <p className="text-sm font-medium">William Johns</p>
+    <p className="text-sm font-medium">{name.username}</p>
   </div>
 
       <button onClick={toggleDropdown} className="w-7 h-7 flex items-center justify-center rounded-full text-slate-950 font-medium hover:bg-slate-200 cursor-pointer"><i className="fa-solid fa-ellipsis-vertical"></i></button>

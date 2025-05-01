@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ProfileInfo from './ProfileInfo'
 import { useNavigate,Link } from 'react-router-dom'
-import SearchBar from '../components/SearchBar'
 
 
 const Navbar = () => {
