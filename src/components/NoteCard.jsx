@@ -13,7 +13,7 @@ const NoteCard = ({
   onPinNote,
 }) => {
   return (
-    <div className="border lg:w-80 rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out m-4">
+    <div className="border lg:w-80 max-sm:w-70 rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out m-4">
       <div className="flex items-center justify-between">
         <div>
           <h6 className="text-sm font-medium">{title}</h6>
